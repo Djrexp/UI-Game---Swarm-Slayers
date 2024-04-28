@@ -1,14 +1,12 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-using UnityEngine.UI;
 
-public class antMove : MonoBehaviour
+public class MothMove : MonoBehaviour
 {
-    public float moveForce = 1f;  
-    public float changeDirectionTime = 1f;  
     public LevelManager levelMan;
-
+    public float moveSpeed = 2f;
+    public float directionChangeInterval = 3f;
     private Rigidbody2D rb;
     private Vector2 movement;
     private float directionTimer = 0f;
@@ -16,29 +14,28 @@ public class antMove : MonoBehaviour
     void Start()
     {
         rb = GetComponent<Rigidbody2D>();
-        RandomizeMovement(); 
+        ChangeDirection();
     }
 
     void Update()
     {
         directionTimer += Time.deltaTime;
 
-        if (directionTimer >= changeDirectionTime)
+        if (directionTimer >= directionChangeInterval)
         {
             directionTimer = 0f;
-            RandomizeMovement();  
+            ChangeDirection();
         }
 
         RotateInMovementDirection();
-        HandleBoundaries();
     }
 
     void FixedUpdate()
     {
-        rb.velocity = movement * moveForce; 
+        rb.velocity = movement * moveSpeed;
     }
 
-    private void RandomizeMovement()
+    private void ChangeDirection()
     {
         float angle = Random.Range(0, 360) * Mathf.Deg2Rad;
         movement = new Vector2(Mathf.Cos(angle), Mathf.Sin(angle));
@@ -46,19 +43,11 @@ public class antMove : MonoBehaviour
 
     private void RotateInMovementDirection()
     {
-        if (movement != Vector2.zero) 
+        if (movement != Vector2.zero)
         {
             float angle = Mathf.Atan2(movement.y, movement.x) * Mathf.Rad2Deg;
-            angle += -90; 
-            transform.rotation = Quaternion.AngleAxis(angle, Vector3.forward);
-        }
-    }
-
-    private void HandleBoundaries()
-    {
-        if (transform.position.x < -10 || transform.position.x > 10 || transform.position.y < -10 || transform.position.y > 10)
-        {
-            movement = -movement + Random.insideUnitCircle; 
+            angle += -90;
+            transform.rotation = Quaternion.Euler(0, 0, angle);
         }
     }
 

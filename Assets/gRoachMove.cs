@@ -3,20 +3,22 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 
-public class antMove : MonoBehaviour
+public class gRoachMove : MonoBehaviour
 {
-    public float moveForce = 1f;  
-    public float changeDirectionTime = 1f;  
     public LevelManager levelMan;
+    public float moveForce = 3f;  
+    public float changeDirectionTime = 0.3f;  
+    public int hitPoints = 5;  
 
     private Rigidbody2D rb;
     private Vector2 movement;
     private float directionTimer = 0f;
+    private int currentHits = 0;
 
     void Start()
     {
         rb = GetComponent<Rigidbody2D>();
-        RandomizeMovement(); 
+        RandomizeMovement();
     }
 
     void Update()
@@ -26,7 +28,7 @@ public class antMove : MonoBehaviour
         if (directionTimer >= changeDirectionTime)
         {
             directionTimer = 0f;
-            RandomizeMovement();  
+            RandomizeMovement();
         }
 
         RotateInMovementDirection();
@@ -35,7 +37,7 @@ public class antMove : MonoBehaviour
 
     void FixedUpdate()
     {
-        rb.velocity = movement * moveForce; 
+        rb.velocity = movement * moveForce;  
     }
 
     private void RandomizeMovement()
@@ -46,10 +48,10 @@ public class antMove : MonoBehaviour
 
     private void RotateInMovementDirection()
     {
-        if (movement != Vector2.zero) 
+        if (movement != Vector2.zero)
         {
             float angle = Mathf.Atan2(movement.y, movement.x) * Mathf.Rad2Deg;
-            angle += -90; 
+            angle += -45;  
             transform.rotation = Quaternion.AngleAxis(angle, Vector3.forward);
         }
     }
@@ -58,13 +60,17 @@ public class antMove : MonoBehaviour
     {
         if (transform.position.x < -10 || transform.position.x > 10 || transform.position.y < -10 || transform.position.y > 10)
         {
-            movement = -movement + Random.insideUnitCircle; 
+            movement = -movement + Random.insideUnitCircle;
         }
     }
 
     private void OnMouseDown()
     {
-        levelMan.AntClicked();
-        Destroy(gameObject);
+        currentHits++;
+        if (currentHits >= hitPoints)
+        {
+            levelMan.AntClicked();  
+            Destroy(gameObject);
+        }
     }
 }

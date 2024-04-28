@@ -13,6 +13,7 @@ GameObject:
   - component: {fileID: -1351726726239848153}
   - component: {fileID: -6142112864502249799}
   - component: {fileID: 8772748541451317651}
+  - component: {fileID: 1631926644922335641}
   m_Layer: 0
   m_Name: Fly Prefab
   m_TagString: Untagged
@@ -113,7 +114,7 @@ Rigidbody2D:
   m_Interpolate: 1
   m_SleepingMode: 1
   m_CollisionDetection: 1
-  m_Constraints: 0
+  m_Constraints: 4
 --- !u!61 &-6142112864502249799
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -171,5 +172,51 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d19b9cd34de071a4fad7b90e0a5469b1, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  levelMan: {fileID: 0}
   moveSpeed: 5
   directionChangeInterval: 1
+--- !u!61 &1631926644922335641
+BoxCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4151644128481951115}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_ForceSendLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_ForceReceiveLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_ContactCaptureLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_CallbackLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_IsTrigger: 0
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: -0.82, y: 1.02}
+  m_SpriteTilingProperty:
+    border: {x: 0, y: 0, z: 0, w: 0}
+    pivot: {x: 0.5, y: 0.5}
+    oldSize: {x: 8.94, y: 8.94}
+    newSize: {x: 8, y: 8}
+    adaptiveTilingThreshold: 0.5
+    drawMode: 0
+    adaptiveTiling: 0
+  m_AutoTiling: 0
+  serializedVersion: 2
+  m_Size: {x: 5.53, y: 5.41}
+  m_EdgeRadius: 0
