@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 
-public class MosquitoMove : MonoBehaviour
+public class mosquitoMove : MonoBehaviour
 {
     public LevelManager levelMan;
     public float moveSpeed = 3f;
@@ -64,7 +64,7 @@ public class MosquitoMove : MonoBehaviour
 
     private void OnMouseDown()
     {
-        levelMan.AntClicked();
+        levelMan.FlyClicked();
         Destroy(gameObject);
     }
 }

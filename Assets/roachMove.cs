@@ -68,7 +68,7 @@ public class roachMove : MonoBehaviour
         currentHits++;
         if (currentHits >= hitPoints)
         {
-            levelMan.AntClicked();
+            levelMan.RoachClicked();
             Destroy(gameObject);
         }
     }

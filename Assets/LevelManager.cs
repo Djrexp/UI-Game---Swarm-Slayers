@@ -7,9 +7,20 @@ using UnityEngine.SceneManagement;
 
 public class LevelManager : MonoBehaviour {
     public GameObject antPrefab;  // Reference to the ant prefab
+    public GameObject beetlePrefab;
+    public GameObject centipedePrefab;
+    public GameObject groachPrefab;
+    public GameObject roachPrefab;
     public GameObject flyPrefab;
     public GameObject locustPrefab;
-    public GameObject roachPrefab;
+    public GameObject mosuitoPrefab;
+    public GameObject mothPrefab;
+    public GameObject scorpionPrefab;
+    public GameObject spiderPrefab;
+    public GameObject termitePrefab;
+    public GameObject tickPrefab;
+    public GameObject waspPrefab;
+    public GameObject wormPrefab;
 
     public Transform spawnArea;   // The area where ants will spawn
     public Text levelText;        // UI Text to display current level
@@ -23,10 +34,9 @@ public class LevelManager : MonoBehaviour {
     public Button nextLevelButton, mainMenuButton, settingsButton; // Buttons for user interaction
 
     public int level = 1;
-    public int quota = 10;       // Starting number of ants to be clicked
+    public int quota = 10;            // Starting number of points to reach
     public float timeRemaining;
-    public int antsClicked = 0;
-    public int points = 0;       // Starting points
+    public int points = 0;            // Starting points
     public int totalPoints = 0;
 
     void Start()
@@ -56,14 +66,13 @@ public class LevelManager : MonoBehaviour {
     }
 
     void StartLevel() {
-        // antsClicked = 0;
         timeRemaining = 60f;
         UpdateLevelText();
         UpdatePointText();
         UpdateTimeText();
         UpdateQuotaText();
         CalculateSpawnAreaBounds();
-        SpawnCreatures(quota + 5);
+        SpawnCreatures(quota + 10);
     }
 
     void CalculateSpawnAreaBounds() {
@@ -95,12 +104,34 @@ public class LevelManager : MonoBehaviour {
         // Determine type and assign the LevelManager reference accordingly
         if (creature.GetComponent<antMove>() != null) {
             creature.GetComponent<antMove>().levelMan = this;
+        } else if (creature.GetComponent<beetleMove>() != null) {
+            creature.GetComponent<beetleMove>().levelMan = this;
+        } else if (creature.GetComponent<centipedeMove>() != null) {
+            creature.GetComponent<centipedeMove>().levelMan = this;
         } else if (creature.GetComponent<flyMove>() != null) {
             creature.GetComponent<flyMove>().levelMan = this;
+        } else if (creature.GetComponent<groachMove>() != null) {
+            creature.GetComponent<groachMove>().levelMan = this;
         } else if (creature.GetComponent<locustMove>() != null) {
             creature.GetComponent<locustMove>().levelMan = this;
+        } else if (creature.GetComponent<mosquitoMove>() != null) {
+            creature.GetComponent<mosquitoMove>().levelMan = this;
+        } else if (creature.GetComponent<mothMove>() != null) {
+            creature.GetComponent<mothMove>().levelMan = this;
         } else if (creature.GetComponent<roachMove>() != null) {
             creature.GetComponent<roachMove>().levelMan = this;
+        } else if (creature.GetComponent<scorpionMove>() != null) {
+            creature.GetComponent<scorpionMove>().levelMan = this;
+        } else if (creature.GetComponent<spiderMove>() != null) {
+            creature.GetComponent<spiderMove>().levelMan = this;
+        } else if (creature.GetComponent<termiteMove>() != null) {
+            creature.GetComponent<termiteMove>().levelMan = this;
+        } else if (creature.GetComponent<tickMove>() != null) {
+            creature.GetComponent<tickMove>().levelMan = this;
+        } else if (creature.GetComponent<waspMove>() != null) {
+            creature.GetComponent<waspMove>().levelMan = this;
+        } else if (creature.GetComponent<wormMove>() != null) {
+            creature.GetComponent<wormMove>().levelMan = this;
         }
     }
 
@@ -111,19 +142,101 @@ public class LevelManager : MonoBehaviour {
             case 2:
                 return new GameObject[] { antPrefab, flyPrefab };
             case 3:
-                return new GameObject[] { antPrefab, flyPrefab, locustPrefab };
+                return new GameObject[] { flyPrefab, locustPrefab };
+            case 4:
+                return new GameObject[] { locustPrefab, roachPrefab };
             case 5:
-                return new GameObject[] { antPrefab, flyPrefab, locustPrefab, roachPrefab };
+                return new GameObject[] {roachPrefab, mothPrefab };
+            case 6:
+                return new GameObject[] { mothPrefab, centipedePrefab };
             default:
-                return new GameObject[] { antPrefab, flyPrefab, locustPrefab, roachPrefab }; // Default to only spawning ants
+                return new GameObject[] { groachPrefab }; // Default to only spawning ants
         }
     }
 
-    public void AntClicked() {
-        antsClicked++;
-        points++;  // Increment points for each ant clicked
+    public void AntClicked()
+    {
+        points++;
         UpdatePointText();
-        if (antsClicked >= quota) {
+        if (points >= quota)
+        {
+            //NextLevel();
+            ShowResults(true);
+        }
+    }
+
+    public void BeetleClicked()
+    {
+        points += 2;
+        UpdatePointText();
+        if (points >= quota)
+        {
+            //NextLevel();
+            ShowResults(true);
+        }
+    }
+
+    public void FlyClicked()
+    {
+        points += 3;
+        UpdatePointText();
+        if (points >= quota)
+        {
+            //NextLevel();
+            ShowResults(true);
+        }
+    }
+
+    public void RoachClicked()
+    {
+        points += 4;
+        UpdatePointText();
+        if (points >= quota)
+        {
+            //NextLevel();
+            ShowResults(true);
+        }
+    }
+
+    public void TermiteClicked()
+    {
+        points += 5;
+        UpdatePointText();
+        if (points >= quota)
+        {
+            //NextLevel();
+            ShowResults(true);
+        }
+    }
+
+    public void TickClicked()
+    {
+        points += 6;
+        UpdatePointText();
+        if (points >= quota)
+        {
+            //NextLevel();
+            ShowResults(true);
+        }
+    }
+
+    public void ScorpionClicked()
+    {
+        points += 7;
+        UpdatePointText();
+        if (points >= quota)
+        {
+            //NextLevel();
+            ShowResults(true);
+        }
+    }
+
+    public void GroachClicked()
+    {
+        points += 10;
+        UpdatePointText();
+        if (points >= quota)
+        {
             //NextLevel();
             ShowResults(true);
         }
@@ -155,8 +268,7 @@ public class LevelManager : MonoBehaviour {
     void NextLevel() {
         level++;
         points = 0;
-        antsClicked = 0;
-        quota += 5;
+        quota += 10;
         levelTime = 60f;
         resultPanel.SetActive(false);
         StartLevel();

@@ -1,6 +1,6 @@
 using UnityEngine;
 
-public class BeetleMove : MonoBehaviour
+public class beetleMove : MonoBehaviour
 {
     public float moveSpeed = 2f;
     public float directionChangeInterval = 3f;
@@ -57,7 +57,7 @@ public class BeetleMove : MonoBehaviour
         currentHits++;
         if (currentHits >= hitPoints)
         {
-            levelMan.AntClicked();
+            levelMan.BeetleClicked();
             Destroy(gameObject);
         }
     }

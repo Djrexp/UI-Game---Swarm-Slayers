@@ -1,6 +1,6 @@
 using UnityEngine;
 
-public class WaspMove : MonoBehaviour
+public class waspMove : MonoBehaviour
 {
     public float moveSpeed = 4f;
     public float directionChangeInterval = 0.75f;
@@ -57,7 +57,7 @@ public class WaspMove : MonoBehaviour
         currentHits++;
         if (currentHits >= hitPoints)
         {
-            levelMan.AntClicked();
+            levelMan.ScorpionClicked();
             Destroy(gameObject);
         }
     }

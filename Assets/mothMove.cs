@@ -2,7 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class MothMove : MonoBehaviour
+public class mothMove : MonoBehaviour
 {
     public LevelManager levelMan;
     public float moveSpeed = 2f;
@@ -53,7 +53,7 @@ public class MothMove : MonoBehaviour
 
     private void OnMouseDown()
     {
-        levelMan.AntClicked();
+        levelMan.FlyClicked();
         Destroy(gameObject);
     }
 }

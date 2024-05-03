@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 
-public class gRoachMove : MonoBehaviour
+public class groachMove : MonoBehaviour
 {
     public LevelManager levelMan;
     public float moveForce = 3f;  
@@ -69,7 +69,7 @@ public class gRoachMove : MonoBehaviour
         currentHits++;
         if (currentHits >= hitPoints)
         {
-            levelMan.AntClicked();  
+            levelMan.GroachClicked();  
             Destroy(gameObject);
         }
     }

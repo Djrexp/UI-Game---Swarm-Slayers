@@ -1378,7 +1378,7 @@ MonoBehaviour:
       m_Calls: []
   m_text: 'Name:           Tik
 
-    Kill Points:     5
+    Kill Points:     6
 
     Notes:           Tiny'
   m_isRightToLeft: 0
@@ -1788,7 +1788,7 @@ MonoBehaviour:
       m_Calls: []
   m_text: 'Name:           Skeeter
 
-    Kill Points:     4
+    Kill Points:     3
 
     Notes:          
     Small'
@@ -1927,7 +1927,7 @@ MonoBehaviour:
       m_Calls: []
   m_text: 'Name:           Ant
 
-    Kill Points:     3
+    Kill Points:     1
 
     Notes:           Small'
   m_isRightToLeft: 0
@@ -2065,7 +2065,7 @@ MonoBehaviour:
       m_Calls: []
   m_text: 'Name:           Moth
 
-    Kill Points:     4
+    Kill Points:     3
 
     Notes:           Pretty'
   m_isRightToLeft: 0
@@ -2747,7 +2747,7 @@ MonoBehaviour:
       m_Calls: []
   m_text: 'Name:           Beetle
 
-    Kill Points:     3
+    Kill Points:     2
 
     Notes:           Slow'
   m_isRightToLeft: 0
@@ -2885,7 +2885,7 @@ MonoBehaviour:
       m_Calls: []
   m_text: 'Name:           Termite
 
-    Kill Points:     7
+    Kill Points:     5
 
     Notes:          
     Small'

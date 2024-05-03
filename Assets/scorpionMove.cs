@@ -2,7 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class ScorpionMove : MonoBehaviour
+public class scorpionMove : MonoBehaviour
 {
     public LevelManager levelMan;
     public float moveSpeed = 2.5f;
@@ -59,7 +59,7 @@ public class ScorpionMove : MonoBehaviour
 
     private void OnMouseDown()
     {
-        levelMan.AntClicked();
+        levelMan.ScorpionClicked();
         Destroy(gameObject);
     }
 }

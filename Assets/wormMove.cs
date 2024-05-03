@@ -2,7 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class WormMove : MonoBehaviour
+public class wormMove : MonoBehaviour
 {
     public LevelManager levelMan;
     public float moveSpeed = 1.5f;
@@ -58,7 +58,7 @@ public class WormMove : MonoBehaviour
 
     private void OnMouseDown()
     {
-        levelMan.AntClicked();
+        levelMan.TermiteClicked();
         Destroy(gameObject);
     }
 }

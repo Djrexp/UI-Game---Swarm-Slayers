@@ -58,7 +58,7 @@ public class tickMove : MonoBehaviour
 
     private void OnMouseDown()
     {
-        levelMan.AntClicked();
+        levelMan.TickClicked();
         Destroy(gameObject);
     }
 }

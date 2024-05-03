@@ -62,7 +62,7 @@ public class locustMove : MonoBehaviour
     private void OnMouseDown()
     {
         // Logic for when the ant is clicked
-        levelMan. AntClicked();
+        levelMan. RoachClicked();
         gameObject.SetActive(false);
         Destroy(this.gameObject);
     }

@@ -1,6 +1,6 @@
 using UnityEngine;
 
-public class SpiderMove : MonoBehaviour
+public class spiderMove : MonoBehaviour
 {
     public float moveSpeed = 3f;
     public float directionChangeInterval = 2f;
@@ -57,7 +57,7 @@ public class SpiderMove : MonoBehaviour
         currentHits++;
         if (currentHits >= hitPoints)
         {
-            levelMan.AntClicked();
+            levelMan.ScorpionClicked();
             Destroy(gameObject);
         }
     }

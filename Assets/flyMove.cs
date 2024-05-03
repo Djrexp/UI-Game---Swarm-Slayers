@@ -58,7 +58,7 @@ public class flyMove : MonoBehaviour
 
     private void OnMouseDown()
     {
-        levelMan.AntClicked();  
+        levelMan.FlyClicked();  
         gameObject.SetActive(false);
         Destroy(this.gameObject);  
     }

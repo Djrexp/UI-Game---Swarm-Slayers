@@ -2607,6 +2607,129 @@ RectTransform:
   m_AnchoredPosition: {x: 0, y: 0}
   m_SizeDelta: {x: 100, y: 100}
   m_Pivot: {x: 0.5, y: 0.5}
+--- !u!1 &1288469995
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1288469996}
+  - component: {fileID: 1288469998}
+  - component: {fileID: 1288469997}
+  m_Layer: 5
+  m_Name: <Text> countdown
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!224 &1288469996
+RectTransform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1288469995}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 1909762575}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_AnchorMin: {x: 0.5, y: 0.5}
+  m_AnchorMax: {x: 0.5, y: 0.5}
+  m_AnchoredPosition: {x: 0, y: 0}
+  m_SizeDelta: {x: 250, y: 150}
+  m_Pivot: {x: 0.5, y: 0.5}
+--- !u!114 &1288469997
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1288469995}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5f7201a12d95ffc409449d95f23cf332, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Material: {fileID: 0}
+  m_Color: {r: 1, g: 0, b: 0, a: 1}
+  m_RaycastTarget: 1
+  m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
+  m_Maskable: 1
+  m_OnCullStateChanged:
+    m_PersistentCalls:
+      m_Calls: []
+  m_FontData:
+    m_Font: {fileID: 12800000, guid: 3e9c88485ab0fc440a4115bc1905b5c2, type: 3}
+    m_FontSize: 120
+    m_FontStyle: 0
+    m_BestFit: 0
+    m_MinSize: 0
+    m_MaxSize: 120
+    m_Alignment: 1
+    m_AlignByGeometry: 0
+    m_RichText: 1
+    m_HorizontalOverflow: 0
+    m_VerticalOverflow: 0
+    m_LineSpacing: 1
+  m_Text: 
+--- !u!222 &1288469998
+CanvasRenderer:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1288469995}
+  m_CullTransparentMesh: 1
+--- !u!1 &1313300578
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1313300580}
+  - component: {fileID: 1313300581}
+  m_Layer: 0
+  m_Name: <GameObject> Countdown
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1313300580
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1313300578}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1313300581
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1313300578}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3f6b07ee147d6cc4cbd397223e66d310, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &1382013924
 GameObject:
   m_ObjectHideFlags: 0
@@ -2617,6 +2740,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1382013925}
   - component: {fileID: 1382013926}
+  - component: {fileID: 1382013927}
   m_Layer: 0
   m_Name: LevelManager
   m_TagString: Untagged
@@ -2652,9 +2776,20 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   antPrefab: {fileID: 2579942711164807166, guid: 51a24efa02d6f7a47a4978be137f57cc, type: 3}
+  beetlePrefab: {fileID: 4151644128481951115, guid: 7a6fb314fd8d7f94ba2b1f5914af7307, type: 3}
+  centipedePrefab: {fileID: 4151644128481951115, guid: 3cd0485d8b6378443bd66b3c59fed27b, type: 3}
+  groachPrefab: {fileID: 4151644128481951115, guid: 3d1f28c3f36d58b4c9c0bd823c3f5aa2, type: 3}
+  roachPrefab: {fileID: 4151644128481951115, guid: 9e3f3853c21c05c4e86b2c913cb197e1, type: 3}
   flyPrefab: {fileID: 4151644128481951115, guid: 27d6ad1842b407c46a01b2f6a33d960c, type: 3}
   locustPrefab: {fileID: 4151644128481951115, guid: 42411fe7d21be6040af85083dde876d7, type: 3}
-  roachPrefab: {fileID: 4151644128481951115, guid: 9e3f3853c21c05c4e86b2c913cb197e1, type: 3}
+  mosuitoPrefab: {fileID: 4151644128481951115, guid: 1d6f05af87aaab64d9d8032e8d97be87, type: 3}
+  mothPrefab: {fileID: 4151644128481951115, guid: 05307b5e96efc494fbadeffaa3698bd9, type: 3}
+  scorpionPrefab: {fileID: 4151644128481951115, guid: 50cef95bedf6533468cdb7ff7b202587, type: 3}
+  spiderPrefab: {fileID: 4151644128481951115, guid: 6a812fc9299000f49892fce66ee9fee1, type: 3}
+  termitePrefab: {fileID: 4151644128481951115, guid: f083398adc7e912468adc6a3d1646d38, type: 3}
+  tickPrefab: {fileID: 4151644128481951115, guid: ce65ed39f9d7412468de8641e6ce6cf9, type: 3}
+  waspPrefab: {fileID: 4151644128481951115, guid: 5951c6edfad89864a83e92116f218c61, type: 3}
+  wormPrefab: {fileID: 4151644128481951115, guid: bd05a1d5affcbf54bab81690d4cb4d18, type: 3}
   spawnArea: {fileID: 816638642}
   levelText: {fileID: 543318699}
   timeText: {fileID: 1072860605}
@@ -2672,9 +2807,22 @@ MonoBehaviour:
   level: 1
   quota: 10
   timeRemaining: 0
-  antsClicked: 0
   points: 0
   totalPoints: 0
+--- !u!114 &1382013927
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1382013924}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c553a8c21a4db1f41a547393fdc9032c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  countdownTime: 3
+  countdownDisplay: {fileID: 1288469997}
 --- !u!1 &1625871255
 GameObject:
   m_ObjectHideFlags: 0
@@ -3200,6 +3348,7 @@ RectTransform:
   m_LocalScale: {x: 0, y: 0, z: 0}
   m_ConstrainProportionsScale: 0
   m_Children:
+  - {fileID: 1288469996}
   - {fileID: 543318698}
   - {fileID: 1745206454}
   - {fileID: 1221962212}
@@ -3497,7 +3646,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &2048748288
 RectTransform:
   m_ObjectHideFlags: 0
@@ -3702,6 +3851,7 @@ CanvasRenderer:
 SceneRoots:
   m_ObjectHideFlags: 0
   m_Roots:
+  - {fileID: 1313300580}
   - {fileID: 1382013925}
   - {fileID: 519420032}
   - {fileID: 816638642}

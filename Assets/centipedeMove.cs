@@ -1,6 +1,6 @@
 using UnityEngine;
 
-public class CentipedeMove : MonoBehaviour
+public class centipedeMove : MonoBehaviour
 {
     public float moveSpeed = 2f;
     public int hitPoints = 1;
@@ -48,7 +48,7 @@ public class CentipedeMove : MonoBehaviour
         currentHits++;
         if (currentHits >= hitPoints)
         {
-            levelMan.AntClicked();
+            levelMan.TermiteClicked();
             Destroy(gameObject);
         }
     }

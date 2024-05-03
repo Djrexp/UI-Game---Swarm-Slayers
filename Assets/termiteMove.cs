@@ -1,6 +1,6 @@
 using UnityEngine;
 
-public class TermiteMove : MonoBehaviour
+public class termiteMove : MonoBehaviour
 {
     public float moveSpeed = 1.5f;
     public float directionChangeInterval = 1.5f;
@@ -49,7 +49,7 @@ public class TermiteMove : MonoBehaviour
 
     private void OnMouseDown()
     {
-        levelMan.AntClicked();  
+        levelMan.TermiteClicked();  
         Destroy(gameObject);
     }
 }
